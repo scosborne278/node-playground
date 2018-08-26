@@ -64,6 +64,13 @@ app.get('/bad', (req, res) => {
     });
 });
 
+app.get('/demo', (req, res) => {
+    res.render('demo.hbs', {
+        pageTitle: 'Demo Page',
+        welcomeMessage: 'This is the demo page'
+    });
+});
+
 app.listen(port, () => {
     console.log('Server is online on port ' + port);
 });
